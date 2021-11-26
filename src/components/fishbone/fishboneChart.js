@@ -174,6 +174,6 @@ export default class FishboneChart extends Component {
             index -= colors.length
         }
 
-        return colors[index]
+        return 'orange'
     }
 }
