@@ -10,12 +10,12 @@ export default class FishboneChart extends Component {
         this.state = INITIAL_STATE
     }
 
-    componentWillMount() { 
+    componentWillMount() {
         const data = this.props.data
         if(data) {
-            const effect = Object.keys(data)[this.state.index]            
+            const effect = Object.keys(data)[this.state.index]
             this.setState({causes: data[effect], effect})
-        }        
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -111,7 +111,7 @@ export default class FishboneChart extends Component {
         )
     }
 
-    getEffect() {        
+    getEffect() {
         const color = this.getColor(this.state.index)
         return (
             <div className={`effect left ${color}_ ${color}Border`}>
@@ -125,12 +125,12 @@ export default class FishboneChart extends Component {
     selectDataset(index) {
         const data = this.props.data
         if(data) {
-            const effect = Object.keys(data)[index]            
+            const effect = Object.keys(data)[index]
             this.setState({causes: data[effect], effect, index})
         }
     }
 
-    getLegend() {        
+    getLegend() {
         const labels = Object.keys(this.props.data)
 
         if(labels.length <= 1) {
@@ -156,17 +156,20 @@ export default class FishboneChart extends Component {
     }
 
     getColor(index) {
-        const colors = [
+        var colors = [
             'blue',
             'pink',
             'gray',
-            'green',            
-            'blue_two',            
+            'green',
+            'blue_two',
             'orange',
-            'black',            
+            'black',
             'purple'
         ]
-    
+        if (this.props.colors){
+            colors = this.props.colors
+        }
+
         if (index >= colors.length) {
             index -= colors.length
         }
