@@ -3212,8 +3212,9 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-"fishbone-chart@file:..":
+"fishbone-chart@https://github.com/shenoisam/fishbone-chart":
   version "1.0.24"
+  resolved "https://github.com/shenoisam/fishbone-chart#0fbea523b11a1e295ae2493bdeef37ddd0ca1a2b"
 
 flat-cache@^1.2.1:
   version "1.3.4"

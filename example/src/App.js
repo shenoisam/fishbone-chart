@@ -6,7 +6,7 @@ export default class App extends Component {
 
   render() {
     const data = {
-      '': {
+      'When discharging geriatric stroke patients to home health, emphasizing patient-centered communication, nutrition, and access to care will result in improved patient outcomes as measured by rehospitalization rates and decreased cost to the healthcare system.': {
           'Method': ['Nutrition plan was not set up to supplement Mrs. Moore’s treatment.',
               'Home healthcare “forced” Mrs. Moore to enroll in hospice.',
               'After enrollment, PT and OT are discontinued',
